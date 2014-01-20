@@ -1,0 +1,55 @@
+{
+  "name": "Room Booking System",
+  "version": "0.0.1",
+  "description": "Book Rooms through a simple mobile app",
+  "author": "Dilwoar Hussain <dilwoar.hussain@gmail.com>",
+  "contributors": [{
+    "name": "Devonte Emokpae",
+    "email": "devonte.emokpae@firmstep.com"
+  }],
+  "main": "src/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DnD-Enterprise/BookingSystem.git"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "grunt test",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+  "dependencies": {
+    "bluebird": "1.x.x",
+    "clean-css": "1.x.x",
+    "coffee-script": "1.x.x",
+    "dustjs-helpers": "1.x.x",
+    "dustjs-linkedin": "1.x.x",
+    "express": "3.x.x",
+    "grunt": "0.x.x",
+    "grunt-contrib-clean": "0.x.x",
+    "grunt-contrib-copy": "0.x.x",
+    "grunt-env": "0.x.x",
+    "grunt-livescript": "0.x.x",
+    "grunt-recurse": "0.x.x",
+    "lodash": "2.x.x",
+    "node-uuid": "1.4.0",
+    "npm": "1.x.x",
+    "oboe": "1.x.x",
+    "pulverizr": "0.x.x",
+    "requirejs": "2.x.x",
+    "request": "2.x.x",
+    "uglify-js": "2.x.x"
+  },
+  "devDependencies": {
+    "grunt": "0.x.x",
+    "grunt-contrib-watch": "0.x.x",
+    "grunt-contrib-less": "0.x.x",
+    "grunt-mocha-test": "0.x.x",
+    "mocha": "1.x.x",
+    "mocha-as-promised": "1.x.x",
+    "should": "2.x.x",
+    "supertest": "0.x.x",
+    "blanket": "1.x.x",
+    "chai": "1.x.x"
+  },
+}
