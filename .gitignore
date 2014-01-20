@@ -1,0 +1,13 @@
+www/*
+build/*
+test/res.xml
+.DS_STORE
+._.DS_STORE
+.build
+.project
+.settings
+*.log
+node_modules/*
+*.project
+*.sublime-project
+*.sublime-workspace
