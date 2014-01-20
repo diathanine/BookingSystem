@@ -1,12 +1,14 @@
 {
-  "name": "Room Booking System",
+  "name": "room-booking-system",
   "version": "0.0.1",
   "description": "Book Rooms through a simple mobile app",
   "author": "Dilwoar Hussain <dilwoar.hussain@gmail.com>",
-  "contributors": [{
-    "name": "Devonte Emokpae",
-    "email": "devonte.emokpae@firmstep.com"
-  }],
+  "contributors": [
+    {
+      "name": "Devonte Emokpae",
+      "email": "devonte.emokpae@firmstep.com"
+    }
+  ],
   "main": "src/app.js",
   "repository": {
     "type": "git",
@@ -25,12 +27,7 @@
     "dustjs-helpers": "1.x.x",
     "dustjs-linkedin": "1.x.x",
     "express": "3.x.x",
-    "grunt": "0.x.x",
-    "grunt-contrib-clean": "0.x.x",
-    "grunt-contrib-copy": "0.x.x",
-    "grunt-env": "0.x.x",
-    "grunt-livescript": "0.x.x",
-    "grunt-recurse": "0.x.x",
+    "googleapis": "0.x.x",
     "lodash": "2.x.x",
     "node-uuid": "1.4.0",
     "npm": "1.x.x",
@@ -42,8 +39,13 @@
   },
   "devDependencies": {
     "grunt": "0.x.x",
+    "grunt-contrib-clean": "0.x.x",
+    "grunt-contrib-copy": "0.x.x",
     "grunt-contrib-watch": "0.x.x",
     "grunt-contrib-less": "0.x.x",
+    "grunt-env": "0.x.x",
+    "grunt-livescript": "0.x.x",
+    "grunt-recurse": "0.x.x",
     "grunt-mocha-test": "0.x.x",
     "mocha": "1.x.x",
     "mocha-as-promised": "1.x.x",
@@ -51,5 +53,5 @@
     "supertest": "0.x.x",
     "blanket": "1.x.x",
     "chai": "1.x.x"
-  },
+  }
 }
