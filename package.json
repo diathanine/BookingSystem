@@ -2,7 +2,15 @@
   "name": "room-booking-system",
   "version": "0.0.1",
   "description": "Book Rooms through a simple mobile app",
-  "author": "Dilwoar Hussain <dilwoar.hussain@gmail.com>",
+  "homepage": "http://DnDEnterprise/Room-Booking-System",
+  "licenses": [
+    {"type": "MIT"}
+  ],
+  "author": {
+    "name": "Dilwoar Hussain",
+    "email": "dilwoar.hussain@gmail.com",
+    "url": "http://twitter.com/dilwoar.hussain"
+  },
   "contributors": [
     {
       "name": "Devonte Emokpae",
@@ -23,11 +31,12 @@
   "dependencies": {
     "bluebird": "1.x.x",
     "clean-css": "1.x.x",
-    "coffee-script": "1.x.x",
     "dustjs-helpers": "1.x.x",
-    "dustjs-linkedin": "1.x.x",
+    "dustjs-linkedin": "2.x.x",
     "express": "3.x.x",
+    "font-awesome": "4.x.x",
     "googleapis": "0.x.x",
+    "jquery": "2.x.x",
     "lodash": "2.x.x",
     "node-uuid": "1.4.0",
     "npm": "1.x.x",
@@ -35,17 +44,22 @@
     "pulverizr": "0.x.x",
     "requirejs": "2.x.x",
     "request": "2.x.x",
+    "twitter-bootstrap-3.0.0": "3.x.x",
     "uglify-js": "2.x.x"
   },
   "devDependencies": {
+    "load-grunt-tasks": "0.x.x",
     "grunt": "0.x.x",
     "grunt-contrib-clean": "0.x.x",
+    "grunt-contrib-concat": "0.x.x",
     "grunt-contrib-copy": "0.x.x",
+    "grunt-contrib-jshint": "0.x.x",
+    "grunt-contrib-uglify": "0.x.x",
     "grunt-contrib-watch": "0.x.x",
-    "grunt-contrib-less": "0.x.x",
+    "grunt-dust": "0.x.x",
     "grunt-env": "0.x.x",
     "grunt-livescript": "0.x.x",
-    "grunt-recurse": "0.x.x",
+    "grunt-recess": "0.x.x",
     "grunt-mocha-test": "0.x.x",
     "mocha": "1.x.x",
     "mocha-as-promised": "1.x.x",

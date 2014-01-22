@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 lt-ie7 isie" lang="en"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 ie7 isie" lang="en"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie11 lt-ie10 lt-ie9 ie8 isie" lang="en"> <![endif]-->
+<!--[if IE 9]>     <html class="no-js lt-ie11 lt-ie10 ie9 isie" lang="en"> <![endif]-->
+<!--[if IE 10]>    <html class="no-js lt-ie11 ie10 isie" lang="en"> <![endif]-->
+<!--[if IE 11]>    <html class="no-js ie11 isie" lang="en"> <![endif]-->
+<!--[if !(IE)]><!--> <html class="not-ie no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<title>{config.product}</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+		<link rel="stylesheet" href="./css/foundation/normalize.css" />
+		<link rel="stylesheet" href="./css/foundation/foundation.grid.css" />
+		<link rel="stylesheet" href="./css/foundation/foundation.ie8.grid.css" />
+
+		<link rel="stylesheet" href="./css/foundation/foundation.list.css" />
+		<link rel="stylesheet" href="./css/foundation/foundation.pre-post-fix.css" />
+		<link rel="stylesheet" href="./css/foundation/foundation.typography.css" />
+		<link rel="stylesheet" href="./css/foundation/foundation.breadcrumbs.css" />
+
+		<link rel="stylesheet" href="./css/select2.css" />
+		<link rel="stylesheet" href="./css/html5-range-slider.css" />
+
+		<link rel="stylesheet" href="./css/jQuery-ui.css" />
+		<link rel="stylesheet" href="./css/jQuery-dataTables.css" />
+		<link rel="stylesheet" href="./css/bootstrap-editable.css" />
+
+		{! ALL LESS FILES !}
+		<link rel="stylesheet" href="./css/main.css?v={version.localBuild}" media="screen,print" />
+
+		{! ESRI !}
+		{!<link href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.2/js/esri/css/esri.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.2/js/dojo/dijit/themes/claro/claro.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=3.2" type="text/javascript"></script>!}
+
+		{?config.google.maps.key}
+			<script 
+	        	type="text/javascript" 
+	        	src="https://maps.googleapis.com/maps/api/js?key={config.google.maps.key}&sensor={config.google.maps.sensor}">
+	        </script>
+        {/config.google.maps.key}
+
+        {?config.google.search.key}
+			<script  
+				async=async defer=defer 
+				type="text/javascript" 
+				src="https://www.google.com/jsapi?key={config.google.search.key}">
+			</script>
+        {/config.google.search.key}
+
+		<script type="text/javascript" src="./js/{config.product}.dev.js?v={version.localBuild}"></script>
+
+ 		<script async=async defer=defer type="text/javascript" src="./js/tinymce/tinymce.min.js"></script>
+ 		<script async=async defer=defer type="text/javascript" src="./js/ace/ace.js"></script>
+		
+	</head>
+	<body>
+  		
+		<div id="page" class="row" data-role="main">				
+			<div id="loadingIndicator"></div>
+		</div>	
+		
+		<footer id="footer" class="row">
+			<span id="developer">AchieveForms</span>	
+		</footer>	
+  	</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 isie" lang="en" {?appcache} manifest="{appcache}"{/appcache}> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie10 lt-ie9 lt-ie8 ie7 isie" lang="en" {?appcache} manifest="{appcache}"{/appcache}> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie10 lt-ie9 ie8 isie" lang="en" {?appcache} manifest="{appcache}"{/appcache}> <![endif]-->
+<!--[if IE 9]>     <html class="no-js lt-ie10 ie9 isie" lang="en" {?appcache} manifest="{appcache}"{/appcache}> <![endif]-->
+<!--[if IE 10]>    <html class="no-js ie10 isie" lang="en" {?appcache} manifest="{appcache}"{/appcache}> <![endif]-->
+<!--[if gt IE 10]> <html class="no-js isie" lang="en" {?appcache} manifest="{appcache}"{/appcache}> <![endif]-->
+<!--[if !(IE)]><!--> <html class="not-ie no-js" lang="en" {?appcache} manifest="{appcache}"{/appcache}> <!--<![endif]-->
+	<head>
+		<title>{config.product}</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+		
+		<link rel="stylesheet" href="./css/{config.product}.min.css{^appcache}?v={version.localBuild}{/appcache}" media="screen,print" />	
+
+
+		<script 
+			type="text/javascript" 
+			src="./js/{config.product}.min.js{^appcache}?v={version.localBuild}{/appcache}">
+		</script>
+
+		{! ESRI !}
+		{!<link href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.2/js/esri/css/esri.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.2/js/dojo/dijit/themes/claro/claro.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=3.2" type="text/javascript"></script>!}
+
+
+		{?config.google.maps.key}
+			<script 
+	        	type="text/javascript" 
+	        	src="https://maps.googleapis.com/maps/api/js?key={config.google.maps.key}&amp;sensor={config.google.maps.sensor}">
+	        </script>
+        {/config.google.maps.key}
+
+        {?config.google.search.key}
+			<script  
+				async=async defer=defer 
+				type="text/javascript" 
+				src="https://www.google.com/jsapi?key={config.google.search.key}">
+			</script>
+        {/config.google.search.key}
+
+		<script async=async defer=defer type="text/javascript" src="./js/tinymce/tinymce.min.js"></script>	 
+ 		<script async=async defer=defer type="text/javascript" src="./js/ace/ace.js"></script>  
+        
+	</head>
+	<body>
+  
+		<div id="AFContainer">	
+			<div id='page' class='row'>				
+				<div id="loadingIndicator"></div>
+			</div>	
+			
+			<footer id="footer" class="row" style="text-align:center">
+				<span id="developer">AchieveForms</span>	
+			</footer>
+	
+
+			<script type="text/javascript">				
+				if(!window.jQuery)
+				(function(){
+					var page = document.getElementById("page");
+					
+					var loading = document.getElementById('loadingIndicator');
+					page.removeChild(loading);
+
+					var h1 = document.createElement("h1");
+					var h5 = document.createElement("h5");
+
+					var txt = document.createTextNode("Updating Application...");
+					var txt2 = document.createTextNode("Go grab a bite, some tea, or coffee and return in 5 to 10 mins.");
+					
+					h1.style.textAlign = "center";
+					h1.style.marginTop = '5em';
+
+					h5.style.textAlign = "center";
+					h5.style.marginTop = '5em';
+
+					h1.appendChild(txt);
+					h5.appendChild(txt2);
+
+					page.appendChild(h1);
+					page.appendChild(h5);
+				})()
+			</script>
+		</div>		
+  	</body>
+</html>

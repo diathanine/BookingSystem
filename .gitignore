@@ -1,5 +1,6 @@
 www/*
 build/*
+tmp/*
 test/res.xml
 .DS_STORE
 ._.DS_STORE
