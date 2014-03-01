@@ -30,6 +30,11 @@ module.exports = function(grunt) {
         dest: 'tmp/.src-cache/<%= pkg.name %>.ls'
         /*options: { process: indentToLet }*/
       },
+      coffee: {
+        src: ['libs/**/*.coffee', 'src/**/*.coffee'],
+        dest: 'tmp/.src-cache/<%= pkg.name %>.coffee'
+        /*options: { process: indentToLet }*/
+      },
       less: {
         src: ['styles/src/**/*.less'],
         dest: 'tmp/.styles-cache/<%= pkg.name %>.less'        
@@ -45,6 +50,13 @@ module.exports = function(grunt) {
         ],
         dest: 'build/js/<%= pkg.name %>.js'
       }
+    },
+    coffee: {      
+      dist: {
+        src: '<%= concat.coffee.dest %>',
+        dest: 'tmp/.src-cache/<%= pkg.name %>.js'
+      },
+      options: { sourceMap: true }
     },
     livescript: {
       dist: {
@@ -128,6 +140,9 @@ module.exports = function(grunt) {
       },
       gruntfile: {
         src: 'Gruntfile.js'
+      },
+      js: {
+        src: '<%= concat.dist.dest %>'
       }
     },
     watch: {
@@ -144,7 +159,7 @@ module.exports = function(grunt) {
         }
       },
       js: {
-        files: ['libs/**/*.ls', 'src/**/*.ls'],
+        files: ['libs/**/*.ls', 'src/**/*.ls', 'libs/**/*.coffee', 'src/**/*.coffee', 'libs/**/*.js', 'src/**/*.js'],
         tasks: ['jsminify']
       },
       dust: {
@@ -154,8 +169,9 @@ module.exports = function(grunt) {
     }
   });
  
+  grunt.registerTask('csall', ['concat:coffee', 'coffee']);
   grunt.registerTask('lsall', ['concat:livescript', 'livescript']);
-  grunt.registerTask('jsall', ['lsall', 'concat:dist', 'jshint']);
+  grunt.registerTask('jsall', ['lsall', 'csall', 'concat:dist', 'jshint']);
   grunt.registerTask('jsminify', ['jsall', 'uglify']);
 
   grunt.registerTask('cssall', ['concat:less', 'concat:css','recess:concat']);
